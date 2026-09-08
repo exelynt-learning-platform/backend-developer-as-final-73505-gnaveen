@@ -140,7 +140,7 @@ JSON
   "numberOfSeats": 2
 }
 ```
-Validation
+# Validation
 
 The API validates incoming booking requests.
 
@@ -173,7 +173,7 @@ Validation Error
   "status": 400
 }
 ```
-Database Configuration
+# Database Configuration
 
 The application uses MySQL.
 ```
@@ -204,10 +204,14 @@ JWT_SECRET=your_long_random_jwt_secret
 JWT_EXPIRATION=86400000
 ```
 # Build the Project
-mvn clean package
 
+```
+mvn clean package
+```
 # Run the Application
+```
 mvn spring-boot:run
+```
 
 The application runs on:
 http://localhost:8081
@@ -255,13 +259,16 @@ The application uses stateless JWT authentication.
 /v3/api-docs/**           → Public
 ```
 
+```
 GET /api/resources/**     → USER or ADMIN
 Other /api/resources/**  → ADMIN
 
 /api/reservations/**      → Authenticated users
 
 Everything else           → Authenticated users
+```
 Passwords are stored using BCrypt hashing.
+
 
 # Project Structure
 ```
@@ -360,10 +367,11 @@ Real credentials are not stored in the repository.
 Build output and temporary files are excluded from Git.
 Passwords are stored using BCrypt hashing.
 JWT authentication is stateless.
-
-Git Repository
-
+```
+```
+# Git Repository
 The repository excludes:
+
 ```
 .env
 target/
