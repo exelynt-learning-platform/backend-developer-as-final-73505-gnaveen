@@ -262,7 +262,7 @@ Other /api/resources/**  → ADMIN
 
 Everything else           → Authenticated users
 Passwords are stored using BCrypt hashing.
-```
+
 # Project Structure
 ```
 src/
@@ -360,7 +360,7 @@ Real credentials are not stored in the repository.
 Build output and temporary files are excluded from Git.
 Passwords are stored using BCrypt hashing.
 JWT authentication is stateless.
-```
+
 Git Repository
 
 The repository excludes:
