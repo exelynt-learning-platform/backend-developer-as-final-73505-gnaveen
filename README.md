@@ -239,17 +239,21 @@ Unauthorized requests
 Forbidden requests
 Controller behavior
 ```
-Run all tests: mvn test
-
+Run all tests: 
+```
+mvn test
+````
 Run a specific test class:
-
+```
 mvn -Dtest=JwtAuthenticationTest test
 Security Rules
+```
 ```
 The application uses stateless JWT authentication.
 /auth/**                  → Public
 /swagger-ui/**            → Public
 /v3/api-docs/**           → Public
+```
 ```
 GET /api/resources/**     → USER or ADMIN
 Other /api/resources/**  → ADMIN
@@ -258,6 +262,7 @@ Other /api/resources/**  → ADMIN
 
 Everything else           → Authenticated users
 Passwords are stored using BCrypt hashing.
+```
 ```
 # Project Structure
 ```
