@@ -372,7 +372,7 @@ JWT authentication is stateless.
 # Git Repository
 The repository excludes:
 
-```
+
 .env
 target/
 *.log
