@@ -83,7 +83,7 @@ Example request:
   "username": "user",
   "password": "user"
 }
-
+```
 Successful response:
 JSON
 {
