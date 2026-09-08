@@ -85,26 +85,28 @@ Example request:
 }
 ```
 Successful response:
-JSON
+```JSON
 {
   "token": "JWT_TOKEN"
 }
-
+```
 The returned JWT must be sent with protected requests using:
 Authorization: Bearer <JWT_TOKEN>
 
 Default Roles
 
 The application supports:
+| Role  | Access                                                        |
+| ----- | ------------------------------------------------------------- |
+| USER  | Read resources and access authenticated reservation endpoints |
+| ADMIN | USER permissions + resource modification                      |
 
-Role	Access
-USER	Read resources and access authenticated reservation endpoints
-ADMIN	USER permissions + resource modification
 
 API Endpoints
 Authentication
-Method	Endpoint	 Description	            Authentication
-POST	/auth/login	 Login and receive JWT	  Public
+| Method | Endpoint      | Description           | Authentication |
+| ------ | ------------- | --------------------- | -------------- |
+| POST   | `/auth/login` | Login and receive JWT | Public         |
 
 Bookings
 
@@ -129,6 +131,7 @@ Resources
 
 Example Booking Request
 JSON
+```
 {
   "customerName": "Test User",
   "email": "test@example.com",
@@ -136,7 +139,7 @@ JSON
   "bookingDate": "2026-12-20",
   "numberOfSeats": 2
 }
-
+```
 Validation
 
 The API validates incoming booking requests.
@@ -154,12 +157,14 @@ The application uses centralized exception handling.
 
 Booking Not Found
 JSON
+```
 {
   "message": "Booking not found with id: 99",
   "status": 404
 }
-
+```
 Validation Error
+```
 {
   "message": "Validation failed",
   "errors": {
@@ -167,7 +172,7 @@ Validation Error
   },
   "status": 400
 }
-
+```
 Database Configuration
 
 The application uses MySQL.
@@ -196,7 +201,7 @@ DB_USERNAME=root
 DB_PASSWORD=your_database_password
 JWT_SECRET=your_long_random_jwt_secret
 JWT_EXPIRATION=86400000
-
+```
 # Build the Project
 mvn clean package
 
@@ -354,11 +359,11 @@ JWT authentication is stateless.
 Git Repository
 
 The repository excludes:
-
+```
 .env
 target/
 *.log
-
+```
 Author
 
 Developed as a Spring Boot REST API assessment project.
