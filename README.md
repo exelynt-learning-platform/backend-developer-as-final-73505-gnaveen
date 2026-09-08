@@ -176,19 +176,20 @@ Validation Error
 Database Configuration
 
 The application uses MySQL.
-
+```
 Create the database:
 SQL>> CREATE DATABASE booking_db;
-
+```
 Database credentials are supplied through environment variables.
 
 The application expects:
-
+```
 DB_URL
 DB_USERNAME
 DB_PASSWORD
 JWT_SECRET
 JWT_EXPIRATION
+```
 ## Running the Application
 
 ### 1. Configure Environment Variables
@@ -210,7 +211,7 @@ mvn spring-boot:run
 
 The application runs on:
 http://localhost:8081
-```
+
 Swagger / OpenAPI
 
 Swagger UI is available at:
@@ -222,7 +223,7 @@ OpenAPI specification:
 http://localhost:8081/v3/api-docs
 
 Swagger endpoints are publicly accessible.
-```
+
 # Testing
 
 The project includes automated tests using JUnit 5 and MockMvc.
@@ -237,19 +238,19 @@ ADMIN role access
 Unauthorized requests
 Forbidden requests
 Controller behavior
-
+```
 Run all tests: mvn test
 
 Run a specific test class:
 
 mvn -Dtest=JwtAuthenticationTest test
 Security Rules
-
+```
 The application uses stateless JWT authentication.
 /auth/**                  → Public
 /swagger-ui/**            → Public
 /v3/api-docs/**           → Public
-
+```
 GET /api/resources/**     → USER or ADMIN
 Other /api/resources/**  → ADMIN
 
