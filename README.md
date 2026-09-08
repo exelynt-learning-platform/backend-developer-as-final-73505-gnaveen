@@ -357,8 +357,9 @@ src/
 | 403    | Access denied                                  |
 | 404    | Resource not found                             |
 
-Security & Credential Protection
 ```
+# Security & Credential Protection
+
 Database credentials are provided through environment variables.
 JWT secrets are provided through environment variables.
 Real credentials are not stored in the repository.
@@ -367,8 +368,7 @@ Real credentials are not stored in the repository.
 Build output and temporary files are excluded from Git.
 Passwords are stored using BCrypt hashing.
 JWT authentication is stateless.
-```
-```
+
 # Git Repository
 The repository excludes:
 
