@@ -210,7 +210,7 @@ mvn spring-boot:run
 
 The application runs on:
 http://localhost:8081
-
+```
 Swagger / OpenAPI
 
 Swagger UI is available at:
@@ -222,13 +222,13 @@ OpenAPI specification:
 http://localhost:8081/v3/api-docs
 
 Swagger endpoints are publicly accessible.
-
-Testing
+```
+# Testing
 
 The project includes automated tests using JUnit 5 and MockMvc.
 
 Tests cover:
-
+```
 Authentication
 JWT authentication
 Security authorization
@@ -257,9 +257,9 @@ Other /api/resources/**  → ADMIN
 
 Everything else           → Authenticated users
 Passwords are stored using BCrypt hashing.
-
+```
 # Project Structure
-
+```
 src/
 ├── main/
 │   ├── java/
@@ -332,7 +332,7 @@ src/
             └── security/
                 ├── SecurityAuthorizationTest.java
                 └── JwtAuthenticationTest.java
-
+```
 # HTTP Status Codes
 
 | Status | Meaning                                        |
@@ -345,8 +345,8 @@ src/
 | 403    | Access denied                                  |
 | 404    | Resource not found                             |
 
-
 Security & Credential Protection
+```
 Database credentials are provided through environment variables.
 JWT secrets are provided through environment variables.
 Real credentials are not stored in the repository.
@@ -355,7 +355,7 @@ Real credentials are not stored in the repository.
 Build output and temporary files are excluded from Git.
 Passwords are stored using BCrypt hashing.
 JWT authentication is stateless.
-
+```
 Git Repository
 
 The repository excludes:
