@@ -357,9 +357,9 @@ src/
 | 403    | Access denied                                  |
 | 404    | Resource not found                             |
 
-```
-# Security & Credential Protection
 
+# Security & Credential Protection
+```
 Database credentials are provided through environment variables.
 JWT secrets are provided through environment variables.
 Real credentials are not stored in the repository.
@@ -376,7 +376,6 @@ The repository excludes:
 .env
 target/
 *.log
-```
 Author
 
 Developed as a Spring Boot REST API assessment project.
