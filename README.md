@@ -367,6 +367,7 @@ Real credentials are not stored in the repository.
 .env.example contains only placeholder values.
 Build output and temporary files are excluded from Git.
 Passwords are stored using BCrypt hashing.
+```
 JWT authentication is stateless.
 
 # Git Repository
